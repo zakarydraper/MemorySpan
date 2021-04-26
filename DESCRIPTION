@@ -1,12 +1,16 @@
 Package: MemorySpan
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Measure Digit and Letter Spans
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Zakary A. Draper
+Maintainer: Zakary A. Draper <zakary.draper@ubc.ca>
+Description: A single function for measuring forward and reverse order digit
+    and letter span in the R console. The function presents the user with
+    a sequence of letters or numbers and asks the user to return that sequence
+    in either forward or reverse order. If the user is successful, they are
+    presented with another sequence that is 1 character longer than the
+    sequence that was previously displayed.
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
