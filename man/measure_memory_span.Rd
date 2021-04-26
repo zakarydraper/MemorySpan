@@ -26,3 +26,18 @@ The length of the longest sequence the user correctly repeated.
 \description{
 Does a memory span test using the R console.
 }
+\examples{
+\dontrun{
+# With default arguments
+measure_memory_span()
+
+# Begin with a sequence of 3 elements
+measure_memory_span(span_length = 3)
+
+# Reverse-order letter span
+measure_memory_span(type = "letter", order = "reverse")
+
+# Alternate randomly between forward and reverse order
+measure_memory_span(order = "random")
+}
+}

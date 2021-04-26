@@ -13,6 +13,19 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
+#' # With default arguments
+#' measure_memory_span()
+#'
+#' # Begin with a sequence of 3 elements
+#' measure_memory_span(span_length = 3)
+#'
+#' # Reverse-order letter span
+#' measure_memory_span(type = "letter", order = "reverse")
+#'
+#' # Alternate randomly between forward and reverse order
+#' measure_memory_span(order = "random")
+#' }
 
 measure_memory_span <- function(span_length = 1, type = c("digit", "letter"),
   order = c("forward", "reverse", "random")) {
@@ -42,7 +55,11 @@ measure_memory_span <- function(span_length = 1, type = c("digit", "letter"),
       order <- sample(c("forward", "reverse"), 1)
     }
     prompt <- sample(chunks, span_length, replace = TRUE)
-    message(sprintf("\014Get ready for %i %ss...", span_length, type))
+    message(sprintf(
+      ngettext(span_length,
+        "\014Get ready for %i %s...",
+        "\014Get ready for %i %ss..."),
+      span_length, type))
     Sys.sleep(2)
     for (d in seq_along(prompt)) {
       message("\014", prompt[[d]])
