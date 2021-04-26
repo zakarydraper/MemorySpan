@@ -2,7 +2,7 @@ Package: MemorySpan
 Type: Package
 Title: Measure Digit and Letter Spans
 Version: 0.0.0.9000
-Authors@r: person(c("Zakary", "A."), "Draper", email = "zakary.draper@ubc.ca",
+Authors@R: person(c("Zakary", "A."), "Draper", email = "zakary.draper@ubc.ca",
                   role = c("aut", "cre"))
 Description: A single function for measuring forward and reverse order digit
     and letter span in the R console. The function presents the user with
